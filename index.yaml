@@ -1,0 +1,31 @@
+# SPDX-FileCopyrightText: Copyright DB InfraGO AG and contributors
+# SPDX-License-Identifier: Apache-2.0
+
+apiVersion: v1
+entries:
+  collab-manager:
+  - apiVersion: v2
+    appVersion: v4.2.10
+    created: "2024-08-02T15:07:55.910944659Z"
+    dependencies:
+    - alias: loki
+      condition: loki.enabled
+      name: loki
+      repository: https://grafana.github.io/helm-charts/
+      version: 5.30.0
+    - condition: kube-state-metrics.enabled
+      name: kube-state-metrics
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 5.21.0
+    description: Capella Collaboration Manager
+    digest: 193488ae34df159d32eb6974949c4279bbe56f8223de228124a7f9af905704e9
+    home: https://github.com/DSD-DBS/capella-collab-manager
+    maintainers:
+    - email: set@deutschebahn.com
+      name: Systems Engineering Toolchain team of Digitale Schiene Deutschland
+    name: collab-manager
+    type: application
+    urls:
+    - charts/collab-manager-v4.2.10.tgz
+    version: v4.2.10
+generated: "2024-08-02T15:07:55.898483455Z"
